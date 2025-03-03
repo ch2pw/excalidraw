@@ -232,7 +232,7 @@ export class LinearElementEditor {
       app.scene.getNonDeletedElements(),
       app.scene.getNonDeletedElementsMap(),
       app.state.zoom,
-      elbowed,
+      true,
       elbowed,
     );
     const p = pointFrom<GlobalPoint>(coords.x, coords.y);
@@ -251,6 +251,7 @@ export class LinearElementEditor {
         },
         hoveredElement,
         pointIndex === 0 ? "start" : "end",
+        app.scene.getNonDeletedElementsMap(),
       );
     }
 
